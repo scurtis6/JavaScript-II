@@ -86,7 +86,19 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The director lost company name and email information
+let companyList = []
+  runners.forEach (company => companyList.push(`${company.company_name} ${company.email}`));
+console.log(companyList);
 
 // Problem 2
+// The director needs the email addresses to be in all caps, because this is the best form of communication
+let allCapEmail = [];
+allCapEmail = runners.map(runners => runners.email.toUpperCase());
+console.log(allCapEmail);
 
 // Problem 3
+// The medium shirts were lost in transit and need to know how many mediums need to be reordered.
+let lostMedium = []
+lostMedium = runners.filter(medium => medium.shirt_size === "M");
+console.log(lostMedium);
